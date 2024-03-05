@@ -20,6 +20,8 @@ Create a Python environment in conda or similar, either using the environment.ym
 - seaborn
 - scipy
 - salib
+- xlrd
+- xlwt
 
 ### Install ODYM
 

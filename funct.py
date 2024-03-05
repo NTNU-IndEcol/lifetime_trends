@@ -48,7 +48,7 @@ def multiply_by_uncertainty(durable, problem, param_values_r, dict_values,Parame
             dict_values_r[name] = dict_values[name]*(1+param_values_r[i])
         else:
             dict_values_r[name] = dict_values[name]
-    u_inflows = [param_values_r[i] for i,name in enumerate(problem['names']) if name.startswith('I-')]
+    u_inflows = [param_values_r[i] for i,name in enumerate(problem['names']) if name.startswith('I-seg-')]
     if u_inflows:
         i_seg_d = ParameterDict['I'].MetaData[durable]
         dict_values_r['I'] = i_seg_d.multiply_inflows_by_piecewise_uncert(u_inflows)
